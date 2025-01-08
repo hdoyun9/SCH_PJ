@@ -1,5 +1,6 @@
 import streamlit as st
 import random as rd
+import time as ts
 
 st.title("My first APP")
 
@@ -11,9 +12,12 @@ st.write("\n")
 
 st.markdown('''ranbow[Imaginary]''')
 
-st.button("Reset", type="primary")
+if st.button("Reset", type="primary"):
+    st.write("AHahah! nothiing! you really wanna reset?")
 if st.button("What's in the box?"):
-    st.botton("Botton in botton... Isn't it interesting?):
-
+    st.write("Nothing in the box!")
+    ts.sleep(2)
+    ts.write("ok press 'Reset'botton.")
+    
 else:
     st.write("-Waiting-")
