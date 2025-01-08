@@ -34,8 +34,8 @@ if st.session_state.show_me_only:
         if st.button(f"me! {i}"):
             if i == st.session_state.correct_index:  # 정답 버튼 클릭
                 st.success("You chose the right one! It's your gift! 🎉")
-                st.video("https://www.youtube.com/watch?v=dQw4w9WgXcQ")  # 링크 표시
-                
+                st.video("https://www.youtube.com/watch?v=dQw4w9WgXcQ")  # 비디오 표시
+                reset_app()  # 상태 초기화
             else:  # 오답 버튼 클릭
                 st.error("Wrong choice! Try another one!")
 else:
@@ -44,7 +44,7 @@ else:
         if st.session_state.box_clicked:  # 'What's in the box?' 버튼이 눌린 경우
             st.write("Aha! Nothing! you just tricked again!")
             t.sleep(3)
-            st.write("...Really wanna reset? then press me!~ Not kidding this time!")
+            st.write("...Really wanna reset? then press [me!]~ Not kidding this time!")
             st.session_state.show_me_button = True
         else:
             st.write("You need to check 'What's in the box?' first!")
@@ -53,13 +53,13 @@ else:
     if st.button("What's in the box?"):
         st.write("Nothing in the box!")
         t.sleep(5)
-        st.write(".....Why still here? I said noting!")
+        st.write(".....Why still here? I said nothing!")
         t.sleep(3)
-        st.write("ok, fine.... press reset!")
+        st.write("ok, fine.... press 'reset!'")
         st.session_state.box_clicked = True
 
     # me 버튼
     if st.session_state.show_me_button:
-        if st.button("me!", type="tertiary"):
-            # 'me!' 버튼 클릭 시 다른 버튼 숨기기
+        me_clicked = st.button("me!", type="tertiary")
+        if me_clicked:  # 클릭 시 즉시 show_me_only 상태 변경
             st.session_state.show_me_only = True
