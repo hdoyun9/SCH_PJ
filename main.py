@@ -1,4 +1,5 @@
 import streamlit as st
+import time as t
 import random
 
 # 세션 상태 초기화
@@ -32,17 +33,18 @@ if st.session_state.show_me_only:
     for i in range(1, 21):
         if st.button(f"me! {i}"):
             if i == st.session_state.correct_index:  # 정답 버튼 클릭
-                reset_app()
                 st.success("You chose the right one! It's your gift! 🎉")
                 st.write("[Click here to claim your gift!](https://youtu.be/dQw4w9WgXcQ?si=uvdbW7XaQ6f84BGU)")  # 링크 표시
-                  # 상태 초기화
+                
             else:  # 오답 버튼 클릭
                 st.error("Wrong choice! Try another one!")
 else:
     # Reset 버튼
     if st.button("Reset", type="primary"):
         if st.session_state.box_clicked:  # 'What's in the box?' 버튼이 눌린 경우
-            st.write("Aha! Nothing! You really wanna reset?")
+            st.write("Aha! Nothing! you just tricked again!")
+            t.sleep(3)
+            st.write("...Really wanna reset? then press me!~ Not kidding this time!")
             st.session_state.show_me_button = True
         else:
             st.write("You need to check 'What's in the box?' first!")
@@ -50,6 +52,10 @@ else:
     # What's in the box? 버튼
     if st.button("What's in the box?"):
         st.write("Nothing in the box!")
+        t.sleep(5)
+        st.write(".....Why still here? I said noting!")
+        t.sleep(3)
+        st.write("ok, fine.... press reset!")
         st.session_state.box_clicked = True
 
     # me 버튼
