@@ -13,7 +13,7 @@ st.markdown('''ranbow[Imaginary]''')
 
 st.button("Reset", type="primary")
 if st.button("What's in the box?"):
-    if st.botton("Botton in botton... Isn't it interesting?):
-                 st.botton("You did press it agian! ok, stop.")
+    st.botton("Botton in botton... Isn't it interesting?):
+
 else:
     st.write("-Waiting-")
