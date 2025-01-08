@@ -14,16 +14,21 @@ st.markdown(''':rainbow[Imaginary]''')
 
 # Reset 버튼 동작
 if st.button("Reset", type="primary"):
-    st.write("Aha! Nothing! You really wanna reset?")
-    ts.sleep(1)
+    st.write("Aha! Nothing! You tricked again, dummy!")
+    ts.sleep(3)
+    st.write("Ok Ok... don't be mad. You wanna reset?")
+    ts.sleep(1.5)
     st.write("Then press 'me!'. I'm not kidding this time~")
+    ts.sleep(1)
     st.session_state.show_me_button = True  # Reset 버튼 클릭 시 me 버튼 표시
 
 # What's in the box? 버튼
 if st.button("What's in the box?"):
     st.write("Nothing in the box!")
-    ts.sleep(2)
-    st.write("OK, press 'Reset' button.")
+    ts.sleep(5)
+    st.write(".....Why are you still waiting? I said noting!")
+    ts.sleep(3)
+    st.write("OK, fine.... press 'Reset' button.")
 
 # me 버튼 표시 여부
 if st.session_state.show_me_button:
