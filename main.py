@@ -10,7 +10,7 @@ st.markdown("**This is my Prototype App**")
 
 st.write("\n")
 
-st.markdown(''':ranbow[Imaginary]''')
+st.markdown(''':rainbow[Imaginary]''')
 
 if st.button("Reset", type="primary"):
     st.write("AHahah! nothiing! you really wanna reset?")
