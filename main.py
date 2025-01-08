@@ -34,7 +34,7 @@ if st.session_state.show_me_only:
         if st.button(f"me! {i}"):
             if i == st.session_state.correct_index:  # 정답 버튼 클릭
                 st.success("You chose the right one! It's your gift! 🎉")
-                st.write("[Click here to claim your gift!](https://youtu.be/dQw4w9WgXcQ?si=uvdbW7XaQ6f84BGU)")  # 링크 표시
+                st.video("https://www.youtube.com/watch?v=dQw4w9WgXcQ")  # 링크 표시
                 
             else:  # 오답 버튼 클릭
                 st.error("Wrong choice! Try another one!")
