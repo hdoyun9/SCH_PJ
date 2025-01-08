@@ -5,11 +5,15 @@ st.title("My first APP")
 
 st.write("\n\n")
 
-st.write("Hello! I'm Peter!")
-st.write("My E-mail adress: hdoyun9@gmail.com")
+st.markdown("**This is my Prototype App**")
+
+st.write("\n")
+
+st.markdown('''ranbow[Imaginary]''')
 
 st.button("Reset", type="primary")
-if st.button("Create Random Number"):
-    st.write(rd.randint(0,99999999))
+if st.button("What's in the box?"):
+    if st.botton("Botton in botton... Isn't it interesting?):
+                 st.botton("You did press it agian! ok, stop.")
 else:
     st.write("-Waiting-")
