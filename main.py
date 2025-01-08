@@ -34,7 +34,7 @@ if st.session_state.show_me_only:
         if st.button(f"me! {i}"):
             if i == st.session_state.correct_index:  # 정답 버튼 클릭
                 st.success("You chose the right one! It's your gift! 🎉")
-                st.video("https://www.youtube.com/watch?v=dQw4w9WgXcQ")  # 비디오 표시
+                st.write("[Click here to claim your gift!](https://example.com)")
                 reset_app()  # 상태 초기화
             else:  # 오답 버튼 클릭
                 st.error("Wrong choice! Try another one!")
